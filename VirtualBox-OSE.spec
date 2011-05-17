@@ -37,6 +37,7 @@ Patch10:	VirtualBox-OSE-4.0.0-32bit.patch
 Patch11:	VirtualBox-OSE-3.2.0-visibility.patch
 Patch12:	VirtualBox-OSE-3.2.10-noansi.patch
 Patch14:	VirtualBox-OSE-3.2.6-vboxkeyboard.patch
+Patch16:	VirtualBox-OSE-4.0.8-usblib.patch
 Patch15:	VirtualBox-OSE-4.0.0-makeself.patch
 Patch17:	VirtualBox-OSE-4.0.0-beramono.patch
 Patch18:	VirtualBox-OSE-4.0.2-aiobug.patch
@@ -157,6 +158,7 @@ find -name '*.py[co]' -delete
 %patch12 -p1 -b .noansi
 %patch14 -p1 -b .vboxkeyboard
 %patch15 -p1 -b .makeself
+%patch16 -p1 -b .usblib
 %patch17 -p1 -b .beramono
 %patch18 -p1 -b .aiobug
 

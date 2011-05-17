@@ -1,0 +1,21 @@
+diff -urN VirtualBox-4.0.8_OSE.orig/src/VBox/Main/testcase/Makefile.kmk VirtualBox-4.0.8_OSE/src/VBox/Main/testcase/Makefile.kmk
+--- VirtualBox-4.0.8_OSE.orig/src/VBox/Main/testcase/Makefile.kmk	2011-05-17 18:22:50.988075181 +0400
++++ VirtualBox-4.0.8_OSE/src/VBox/Main/testcase/Makefile.kmk	2011-05-17 18:49:51.322044349 +0400
+@@ -162,7 +162,7 @@
+ 	$(if $(VBOX_USB_WITH_SYSFS),VBOX_USB_WITH_SYSFS,) \
+ 	$(if $(VBOX_USB_WITH_INOTIFY),VBOX_USB_WITH_INOTIFY,)
+ tstHostHardwareLinux_LIBS     += \
+-	$(PATH_OUT)/lib/USBLib.a
++	$(PATH_OUT)/obj/USBLib/USBLib.o
+ 
+ 
+ #
+@@ -187,7 +187,7 @@
+ tstUSBProxyLinux_DEPS     = \
+ 	$(VBOX_PATH_SDK)/bindings/xpcom/include/VirtualBox_XPCOM.h
+ tstUSBProxyLinux_LIBS     += \
+-	$(PATH_OUT)/lib/USBLib.a
++	$(PATH_OUT)/obj/USBLib/USBLib.o
+ 
+ 
+ # generate rules.
